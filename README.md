@@ -357,3 +357,175 @@ switch(표현식) { // 표현식은 조건대상
   - 공통점 : 둘다 문장이 실행되다가 얘내를 만나면 그 다음 문장을 실행하지 않음
   1) break : 감싸고 있는 반복문을 빠져나옴
   2) continue : 반복문 안에서 continue가 위치한곳에서 그 다음 아래 문장을 실행하지 않고 위로올라가서 다음횟수의 반복문을 수행한다
+
+
+# 22.07.21
+- 확인문제풀이
+- 선생님 별찍기 코드
+```
+class StarExam {
+    public static void main(String[] args) {
+        for (int a = 1; a <=5; a++) { // 5행
+        //공백
+            for (int b = a; b < 5; b++) {
+                System.out.print("☆");
+            }
+            //별
+            for (int c = 1; c <= a; c++) {
+                System.out.print("★");                
+            }
+            System.out.println();
+        
+        }
+            
+    }
+}
+```
+
+## 메소드
+1. 객체 안에 선언되어 객체가 가지고 있는 기능이다.
+2. 반드시 class내부에 선언된다.
+3. 호출해서 사용한다(호출되기 전 실행 안됨.)
+4. 재귀호출가능(자기 자신 안에서 자신을 호출)
+5. 메소드 마지막 구현부에서 return 할 수 있다.(특정 값을 호출한 주체에게 return한다)
+6. 재사용 목적 - 코드의 중복을 피할 수 있다
+- Method 작성법
+- ***modifiers*** ***return_type*** ***method이름(DataType 변수이름, DataType 변수이름, ...) { 기능 }*** : modifiers ~ () 까지 선언부 {}는 구현부
+  - modifiers(제한자) : 0개 이상 올 수 있다
+    - 제한자(접근제한자랑 일반제한자의 순서를 바꿔도되지만 일반적으로는 접근제한자가 먼저나옴)
+      1. 접근제한자(access modifier) : 얘는 4개중 무조건 1개를 써야됨
+         1) pubilc : 어디서나 아무나 접근가능
+         2) protected : 상속관계자면 어디서나(폴더) 접근가능
+         3) 아무것도없음 : 같은 폴더 내에서 아무나 접근가능 
+         4) private : 하나의 class 내에서만 접근가능
+      2. 일반 제한자 : 얘는 써도 되고 안써도됨
+         5) static
+         6) final
+         7) abstract
+         8) synchronized
+    - return type : 반드시 한개 작성 - 생략불가 : return은 메소드가 끝날때 가지고 나오는 값이다.
+      1. 기본형 8가지중 1개 : 반드시 구현부 마지막 줄에 ***return 가지고 갈 값이 나와야함***
+      2. object 타입 중 1개 : 반드시 구현부 마지막 줄에 ***return 가지고 갈 값이 나와야함***
+      3. void : 리턴값이 없다
+    - method 이름
+    
+    - () : 인수 = parameter = 아규먼트 = 매개변수 : 메소드를 호출하는 사람이 들고오는 값을 받을 변수를 선언하는 곳
+```
+ class ____ {
+    public 일반제한자 커피 자판기(int 돈) {
+     ---------------기능----------------
+     return 실제 커피라는 값;
+   }
+ }
+ 
+ class 커피 {
+ }
+```
+
+- 메소드 호출방법
+  1. static이 붙은 메소드 호출방법
+     1. ***class이름.method이름(인수, 인수, ..);***
+     ```
+     class Test {
+        public void aa() {
+     
+        }
+     
+        public int bb(String s) {
+            // 기능
+        }
+     
+        public static void cc(int i) {
+        
+        }
+     
+        protected static double dd(String s) {
+     
+        }
+     
+     }
+        다른클래스에서 호출
+     Test.cc(5); // static메서드라서 바로 호출가능
+     double a = Test.dd("o"); // static메서드라서 바로 호출 가능
+     Test t = new Test();
+     t.aa(); // static메서드가 아니라서 객체를 생성한뒤 호출 가능
+     t.cc(33); // static메서드임에도 객체를 만들어서 호출 가능 근데 이렇게 잘 안함
+     ```
+     2. static 메소드안에서는 논static은 못씀 그래서 함부로 쓰면 안됨 계속 static을 써야됨
+  2. 같은 class 내부에서 method 호출
+     - ***this.method이름(값, 값, ...)***(this는 생략도 가능)
+  3. 가장 일반적인 방법
+     1. 호출하려는 method를 감싸고 있는 class를 생성한다(객체생성 : new)
+     2. 객체생성방법
+        - class이름 변수이름 = new class이름(); // 이 경우 객체는 힙이라는 곳에 저장되어 있고 변수이름에는 변수이름이 저장된 힙을 가르키는 HashCode라고 하는 주소값이 저장된다
+        - 주소값 : 클래스이름@hashcode
+        - 만약 객체변수인 변수이름을 print로 출력하면 주소값이 출력됨 그건 toString()에 주소값이 출력되도록 되어있기 때문에 toString()을 오버라이딩해서 리턴값을 바꿔서 객체의 속성, 기능이 뜨게 할 수 있음
+        - 생성된 객체변수를 이용하여 method를 호출한다
+          - 방법 : ***변수이름.method이름({값, 값, ....})***
+  ```
+  class Test {
+        public void aa() {
+            기능;
+     }
+        public int bb() {
+            기능;
+            return 5;
+     }
+        public String cc(int i) {
+            기능;
+            return "배고프다";
+     } 
+  }
+  
+  
+  class MainApp {
+    public static ~~~~~ () {
+            Test test = new Test(); 
+            test.속성;
+            test.method이름(값, 값, ...);
+            test.aa(); // 얘는 return값이 없는 메서드를 호출했기 때문에 메서드가 실행되고나서 끝나면 다시 그냥 호출했던 위치로 되돌아오고 다음 메서드가 실행
+            int b = test.bb(); // 얘는 return값이 있음 그래서 메서드 호출하고 메서드 실행된 뒤 리턴이 5니까 5가 이 호출한 자리로 오게된다. 
+                                // 그 경우 5를 받아줄 바구니(int b)를 선언해줘야된다 근데 5를 받고 싶지 않으면 그냥 바구니 생성안하면 안받고 다음걸로 넘어감
+            String str = test.cc(3); // 얘도 마찬가지로 리턴값을 받고싶으면 이렇게하고 아니면 그냥 test.cc(3);하고 리턴값 버려도됨
+     }
+  }
+  ```
+
+- double d = Math.random(); // 0.0 ~ 0.999
+```
+class Math {
+public static double random() {
+// 기능;
+return 실수값
+}
+}
+```
+- 문자열을 숫자로 변환하는 메소드
+  - int i = Integer.parseInt("10");
+- 숫자를 문자열로 변환하는 메소드
+    - String s = Integer.toString(5);
+```
+class Integer {
+    public static int parseInt(String str) {
+        // 기능
+    return 숫자값
+    }
+    public static String toString(int number) {
+        // 기능
+    return 문자열값
+    }
+}	
+ ```
+- public class는 한 개 만 작성 가능하다.
+- public class가 있을 경우 반드시 public class이름으로 파일명을 지정한다.
+- public class안에 main method 작성한다.
+- class앞에 modifier가 올 수 있는데 접근제한자 중 public or 생략 두가지 중 한가지만 사용가능
+  - But 클래스 안에 클래스에는 private사용가능
+
+- nextLine 사용시 주의사항
+  - 스캐너 사용시 nextInt()로 숫자를 입력하면 만약 50을 입력했다치면 버퍼라는 곳에 50과 \n이 같이들어간다
+  - 보통 next()나 nextInt() 는 공백을 인식하지 않기 때문에 50이라는 값만 쏙 뽑아서 가서 다음게 진행되지만
+  - 얘내가 뽑아가면서 남아있는 \n들은 남아있다 그래서 얘내가 실행된 후에 nextLine() 을 실행하게되면 얘는
+  - 공백을 인식하기 때문에 버퍼에 있는 \n들을 뽑아내면서 다음걸로 넘어가게 된다 그래서 내가 원하는 값들을 입력할수가 없는데
+  - 그럴 경우 위에 scanner.nextLine(); 이걸 한줄 넣어서 버퍼를 초기화해주거나 아니면 전부 다 nextLine()으로
+  - 해서 숫자인경우 Integer.parseInt(scanner.nextLine())으로 숫자로 변환하여 넣으면 된다
