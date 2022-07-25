@@ -529,4 +529,3 @@ class Integer {
   - 공백을 인식하기 때문에 버퍼에 있는 \n들을 뽑아내면서 다음걸로 넘어가게 된다 그래서 내가 원하는 값들을 입력할수가 없는데
   - 그럴 경우 위에 scanner.nextLine(); 이걸 한줄 넣어서 버퍼를 초기화해주거나 아니면 전부 다 nextLine()으로
   - 해서 숫자인경우 Integer.parseInt(scanner.nextLine())으로 숫자로 변환하여 넣으면 된다
-d
