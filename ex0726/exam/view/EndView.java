@@ -19,8 +19,10 @@ public class EndView {
      */
     public static void printSelectAll(Goods[] goodsArr) {
         System.out.println("********상품 LIST("+ GoodsService.count +"개)*************");
-        for (int i = 0; i < GoodsService.count; i++) {
-            System.out.println(goodsArr[i]);
+        for (int i = 0; i < goodsArr.length; i++) {
+            if (goodsArr[i] != null) {
+                System.out.println(goodsArr[i]);
+            }
         }
     }
 

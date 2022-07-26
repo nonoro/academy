@@ -32,8 +32,16 @@ public class GoodsService {
             return 0;
         }
 
-        goodsArr[GoodsService.count++] = goods;
+        int saveIndex = 0;
+        for (int i = 0; i < goodsArr.length; i++) {
+            if (goodsArr[i] == null) {
+                saveIndex = i;
+                break;
+            }
+        }
 
+        goodsArr[saveIndex] = goods;
+        count++;
         return 1;
     }
 
@@ -48,9 +56,13 @@ public class GoodsService {
     // 이때 3개를 리턴해야되는데 이미 Goods에 객체로 만들어놨으니 리턴타입을 Goods로 해야된다.
     // return : 만약 code에 해당하는 값이 있으면 Goods를 리턴하고
     //          없으면 null 리턴
-    public Goods selectByCode (String code) {
-        for (int i = 0; i < count; i++) {
-            if (goodsArr[i].getCode().equals(code)) {
+
+
+    // 1 2 3 null 4 null null null ...
+
+    public Goods selectByCode(String code) {
+        for (int i = 0; i < SIZE; i++) {
+            if (goodsArr[i] != null && goodsArr[i].getCode().equals(code)) {
                 return goodsArr[i];
             }
         }
@@ -81,6 +93,7 @@ public class GoodsService {
         }
 
         goodsArr[goodsIndex] = null;
+        count--;
         return true;
     }
 

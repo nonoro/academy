@@ -19,9 +19,9 @@ public class MenuView {
 
     public void printMenu() {
         while(true) {
-            System.out.println("----------------------------------------------------------------");
-            System.out.println("1. 등록  2. 전체검색  3. 상품코드검색  4. 수정하기  9. 종료");
-            System.out.println("----------------------------------------------------------------");
+            System.out.println("--------------------------------------------------------------------------");
+            System.out.println("1. 등록  2. 전체검색  3. 상품코드검색  4. 수정하기  5. 삭제하기  9. 종료");
+            System.out.println("--------------------------------------------------------------------------");
             System.out.print("메뉴 선택 > ");
             int menuChoice = Integer.parseInt(SCANNER.nextLine());
             switch (menuChoice) {
@@ -66,6 +66,7 @@ public class MenuView {
         String explain = SCANNER.nextLine();
         Goods goods = this.createGoods(code, name, price, explain);
         int result = this.service.insert(goods);
+
         if (result == -1) {
             EndView.printMessage("더 이상 등록할 수 없습니다.");
         } else if (result == 0) {
