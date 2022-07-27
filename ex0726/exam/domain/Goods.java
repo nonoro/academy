@@ -48,11 +48,11 @@ public class Goods {
 
     @Override
     public String toString() {
-        return "Goods{" +
-                "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", explain='" + explain + '\'' +
+        return "상품{" +
+                "상품코드='" + code + '\'' +
+                ", 상품이름='" + name + '\'' +
+                ", 상품가격=" + price +
+                ", 상품설명='" + explain + '\'' +
                 '}';
     }
 }

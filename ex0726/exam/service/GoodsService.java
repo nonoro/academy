@@ -12,6 +12,25 @@ public class GoodsService {
     public static int count; // 0 , 배열방에 저장된 객체의 개수를 체크하는 변수
     // 상품을 관리할 배열을 선언 5개 기본값 10개넘어가면 등록불가
 
+    public void init(String[][] data) {
+        for (int i = 0; i < data.length; i++) {
+            goodsArr[count++] = create(data[i]);
+        }
+    }
+
+    /*
+        Goods를 생성해서 값을 설정하고 생성된 Goods를 리턴하는 메소드
+     */
+    private Goods create(String[] data) {
+        Goods goods = new Goods();
+        goods.setCode(data[0]);
+        goods.setName(data[1]);
+        goods.setPrice(Integer.parseInt(data[2]));
+        goods.setExplain(data[3]);
+
+        return goods;
+    }
+
     private Goods[] goodsArr = new Goods[SIZE];
     // 다른곳에서 굿즈서비스를 생성해서 쓰고있기 때문에 따로 또 엔드뷰에서 생성해서 쓰면안돼서 static을 붙이고 public을 붙임
 
@@ -62,7 +81,7 @@ public class GoodsService {
 
     public Goods selectByCode(String code) {
         for (int i = 0; i < SIZE; i++) {
-            if (goodsArr[i] != null && goodsArr[i].getCode().equals(code)) {
+            if (goodsArr[i] != null && goodsArr[i].getCode().toUpperCase().equals(code.toUpperCase())) {
                 return goodsArr[i];
             }
         }

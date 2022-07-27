@@ -25,7 +25,9 @@ class TwoDmArray {
                 for (int x = 0; x < i; x++) {
                     System.out.print("\t\t");
                 }
+
             }
+
             for (int j = i; j < twoDmArray.length; j++) {
                 System.out.print(twoDmArray[j][i] + "\t");
             }

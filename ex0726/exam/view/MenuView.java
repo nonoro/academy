@@ -17,7 +17,11 @@ public class MenuView {
     private GoodsService service = new GoodsService();
 
 
-    public void printMenu() {
+    public void printMenu(String[][] data) {
+
+        service.init(data);
+
+
         while(true) {
             System.out.println("--------------------------------------------------------------------------");
             System.out.println("1. 등록  2. 전체검색  3. 상품코드검색  4. 수정하기  5. 삭제하기  9. 종료");
