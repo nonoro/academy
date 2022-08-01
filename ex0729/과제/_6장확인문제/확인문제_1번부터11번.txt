@@ -1,0 +1,20 @@
+1. 3번
+2. 4번
+3. 4번
+4. 3번
+5. 1번
+6. 4번
+7. 2번
+8. 2번
+9. 2번
+10. 4번
+11. 3번
+12. public String name = 필드
+    public Member(String name) { ... } = 생성자
+    public void setName(String name) { ... } = 메소드
+
+/*
+  본인이름: 권규정
+  날짜: 22.07.29
+  주제 : 확인문제1-12
+*/
