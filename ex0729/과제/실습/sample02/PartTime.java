@@ -20,14 +20,23 @@ public class PartTime extends Employee {
         this.timePay = timePay;
     }
 
+//    @Override
+//    public String toString() {
+//        return super.toString() + " | " + timePay;
+//    }
+
+
     @Override
     public String toString() {
-        return super.toString() + " | " + timePay;
+        final StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append(timePay);
+        return sb.toString();
     }
 
     @Override
     public void message() {
-        System.out.println(super.geteName() + "사원은 " + "비정규직입니다.");
+        System.out.println(super.getEmpName() + "사원은 " + "비정규직입니다.");
     }
 }
 

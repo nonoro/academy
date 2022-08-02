@@ -2,7 +2,7 @@ package ex0729.과제.실습.sample01;
 
 public class FullTime {
     private int empNo;
-    private String eName;
+    private String empName;
     private String job;
     private int mgr;
     private String hiredate;
@@ -14,9 +14,9 @@ public class FullTime {
 
     }
 
-    public FullTime(int empNo, String eName, String job, int mgr, String hiredate, String deptName, int salary, int bonus) {
+    public FullTime(int empNo, String empName, String job, int mgr, String hiredate, String deptName, int salary, int bonus) {
         this.empNo = empNo;
-        this.eName = eName;
+        this.empName = empName;
         this.job = job;
         this.mgr = mgr;
         this.hiredate = hiredate;
@@ -33,12 +33,12 @@ public class FullTime {
         this.empNo = empNo;
     }
 
-    public String geteName() {
-        return eName;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void seteName(String eName) {
-        this.eName = eName;
+    public void setEmpName(String eName) {
+        this.empName = eName;
     }
 
     public String getJob() {
@@ -90,12 +90,13 @@ public class FullTime {
     }
 
     public void message() {
-        System.out.println(eName + "사원은 " + "정규직입니다.");
+        System.out.println(empName + "사원은 " + "정규직입니다.");
     }
 
+    @Override
     public String toString() {
         return empNo + " | "
-                + eName + " | "
+                + empName + " | "
                 + job + " | "
                 + mgr + " | "
                 + hiredate + " | "

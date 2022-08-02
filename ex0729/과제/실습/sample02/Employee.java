@@ -2,7 +2,7 @@ package ex0729.과제.실습.sample02;
 
 public abstract class Employee {
     private int empNo;
-    private String eName;
+    private String empName;
     private String job;
     private int mgr;
     private String hiredate;
@@ -12,9 +12,9 @@ public abstract class Employee {
 
     }
 
-    public Employee(int empNo, String eName, String job, int mgr, String hiredate, String deptName) {
+    public Employee(int empNo, String empName, String job, int mgr, String hiredate, String deptName) {
         this.empNo = empNo;
-        this.eName = eName;
+        this.empName = empName;
         this.job = job;
         this.mgr = mgr;
         this.hiredate = hiredate;
@@ -29,12 +29,12 @@ public abstract class Employee {
         this.empNo = empNo;
     }
 
-    public String geteName() {
-        return eName;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void seteName(String eName) {
-        this.eName = eName;
+    public void setEmpName(String empName) {
+        this.empName = empName;
     }
 
     public String getJob() {
@@ -69,18 +69,32 @@ public abstract class Employee {
         this.deptName = deptName;
     }
 
+//    @Override
+//    public String toString() {
+//        return empNo + " | "
+//                + empName + " | "
+//                + job + " | "
+//                + mgr + " | "
+//                + hiredate + " | "
+//                + deptName;
+//    }
+
+
     @Override
-    public String toString() {
-        return empNo + " | "
-                + eName + " | "
-                + job + " | "
-                + mgr + " | "
-                + hiredate + " | "
-                + deptName;
+    public String toString() { // 싱글쓰레드라 toString() 빌더사용
+        final StringBuilder sb = new StringBuilder();
+        sb.append(empNo).append(" | ");
+        sb.append(empName).append(" | ");
+        sb.append(job).append(" | ");
+        sb.append(mgr);
+        sb.append(hiredate).append(" | ");
+        sb.append(deptName).append(" | ");
+        return sb.toString();
     }
 
-    public abstract void message();
-
+    public abstract void message(); // 만약 추상클래스가 아닐때도 얘를 쓰는데 아무내용이 없는 message메소드를 부모에게 쓰는이유는
+                                    // 부모타입으로 자손객체를 선언할때 부모에 없는 메소드를 쓰려면 형변환을 해야하는데 이렇게하면
+                                    // 자동으로 자손이 오버라이드한 메소드로 실행이되기 때문에 호출하기 편해서 이렇게 한다!
 }
 
 

@@ -12,12 +12,13 @@ public class MainApp {
         emp[0] = new FullTime(10, "유재석", "개그우먼", 0, "2013-05-01", "무한도전", 8500, 200);
         emp[1] = new FullTime(20, "박명수", "가수", 10, "2013-06-20", "무한도전", 7500, 100);
         emp[2] = new FullTime(30, "정준하", "예능인", 10, "2013-06-22", "무한도전", 6000, 0);
+
         emp[3] = new PartTime(40, "노홍철", "예능인", 20, "2014-05-01", "무한도전", 20000);
         emp[4] = new PartTime(50, "하하", "가수", 30, "2014-05-02", "무한도전", 25000);
 
         System.out.println("**************************** Emp 정보 *********************************");
         for (Employee employee : emp) {
-            System.out.println(employee);
+            System.out.println(employee); // 얘는 자식이 toString()을 오버라이드했기 때문에 자식 toString()이 호출됨 따로 형변환 필요없음
         }
         System.out.println();
 

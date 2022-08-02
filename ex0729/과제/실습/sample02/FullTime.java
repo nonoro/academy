@@ -1,6 +1,6 @@
 package ex0729.과제.실습.sample02;
 
-public class FullTime extends Employee {
+public class FullTime extends Employee {        //  FullTime is an Employee
     private int salary;
     private int bonus;
 
@@ -29,14 +29,25 @@ public class FullTime extends Employee {
         this.bonus = bonus;
     }
 
+//    @Override
+//    public String toString() {
+//        return " | " + salary + " | " + bonus;
+//    }
+
+
     @Override
     public String toString() {
-        return super.toString() + " | " + salary + " | " + bonus;
+        final StringBuilder sb = new StringBuilder();
+        sb.append( super.toString() );
+        sb.append(salary);
+        sb.append(" | ");
+        sb.append(bonus);
+        return sb.toString();
     }
 
     @Override
     public void message() {
-        System.out.println(super.geteName() + "사원은 " + "정규직입니다.");
+        System.out.println(super.getEmpName() + "사원은 " + "정규직입니다.");
     }
 }
 

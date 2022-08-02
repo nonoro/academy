@@ -19,23 +19,23 @@ public class MainApp {
 
         //출력화면을 보고 코딩...
         System.out.println("**************************** FullTime 정보 *********************************");
-        for (int i = 0; i < full.length; i++) {
-            System.out.println(full[i]);
-        }
+        for (FullTime fullTime : full) {
+            System.out.println(fullTime); // 인수로 객체가 오면 자동으로 객체.toString()자동 호출이되고 리턴하는 값을 출력한다.
+        }                                 // 그래서 .toString()은 따로 안써도됨 자동으로 호출 따라서 얘는 fullTime.toString()이 출력됨
         System.out.println();
 
         System.out.println("**************************** PartTime 정보 *********************************");
-        for (int i = 0; i < part.length; i++) {
-            System.out.println(part[i]);
+        for (PartTime partTime : part) {
+            System.out.println(partTime);
         }
         System.out.println();
 
         System.out.println("**************************** Message *********************************");
-        for (int i = 0; i < full.length; i++) {
-            full[i].message();
+        for (FullTime fullTime : full) {
+            fullTime.message();
         }
-        for (int i = 0; i < part.length; i++) {
-            part[i].message();
+        for (PartTime partTime : part) {
+            partTime.message();
         }
 
 
