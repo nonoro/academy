@@ -5,7 +5,7 @@ public class FailView {
 
     }
 
-    public static void errorMessage(String message) {
-        System.out.println(message);
+    public static void errorMessage(Exception e) {
+        System.out.println(e.getMessage());
     }
 }

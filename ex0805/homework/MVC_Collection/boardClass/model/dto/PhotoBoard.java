@@ -1,10 +1,21 @@
 package ex0805.homework.MVC_Collection.boardClass.model.dto;
 
+import java.util.ResourceBundle;
+
 public class PhotoBoard extends Board {
     private String imgName;
 
     public PhotoBoard() {
 
+    }
+
+    public static PhotoBoard of(String[] values) {
+        return new PhotoBoard(Integer.parseInt(values[0])
+                                ,values[1]
+                                ,values[2]
+                                ,values[3]
+                                ,values[4]
+                                ,values[5]);
     }
 
     public PhotoBoard(int no, String subject, String writer, String content, String date, String imgName) {

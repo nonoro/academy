@@ -34,17 +34,17 @@ public class MainView {
 
 		System.out.println("3.Board에서 글번호에 해당하는 게시물 검색");
 		System.out.println("-----게시물이 존재하는 경우 검색 test----- ");
-		BoardController.getBoardByno("archive", 10); //존재하는 게시물
+		BoardController.getBoardByNo("archive", 10); //존재하는 게시물
 
 		System.out.println();
 
 		System.out.println("-----게시물이 없는 경우(글번호 오류)  검색 test-----");
-		BoardController.getBoardByno("archive", 50);// 없는 게시물
+		BoardController.getBoardByNo("archive", 50);// 없는 게시물
 
 		System.out.println();
 
 		System.out.println("-----게시물이 없는 경우(kind오류)  검색 test-----");
-		BoardController.getBoardByno("test", 10);// 없는 게시물
+		BoardController.getBoardByNo("test", 10);// 없는 게시물
 
 		System.out.println("\n");
 

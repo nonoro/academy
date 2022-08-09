@@ -1,5 +1,9 @@
 package ex0805.homework.MVC_Collection.boardClass.model.dto;
 
+import ex0805.map.propertiesExam.PropertiesExam;
+
+import java.util.ResourceBundle;
+
 public class ArchiveBoard extends Board {
     private String fileName;
     private int fileSize;
@@ -13,6 +17,10 @@ public class ArchiveBoard extends Board {
         super(no, subject, writer, content, date);
         this.fileName = fileName;
         this.fileSize = fileSize;
+    }
+
+    public static ArchiveBoard of(String[] values) {
+        return new ArchiveBoard(Integer.parseInt(values[0]), values[1], values[2], values[3], values[4], values[5], Integer.parseInt(values[6]));
     }
 
     public String getFileName() {
@@ -30,6 +38,7 @@ public class ArchiveBoard extends Board {
     public void setFileSize(int fileSize) {
         this.fileSize = fileSize;
     }
+
 
     @Override
     public String toString() {

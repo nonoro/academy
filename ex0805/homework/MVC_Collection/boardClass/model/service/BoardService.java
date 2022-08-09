@@ -1,6 +1,7 @@
 package ex0805.homework.MVC_Collection.boardClass.model.service;
 
 import ex0805.homework.MVC_Collection.boardClass.model.dto.Board;
+import ex0805.homework.MVC_Collection.boardClass.model.util.InexistentException;
 
 import java.util.Map;
 
