@@ -18,6 +18,10 @@ public class BoardController {
 
     }
 
+    /**
+     * 전체검색
+     */
+
     public static void getAllBoard() {
         try {
             Map<String, Map<String, Board>> boardList = service.getBoardList();
@@ -37,9 +41,9 @@ public class BoardController {
         }
     }
 
-    public static void getBoardByNo(String subject, int no) {
+    public static void getBoardByNo(String kind, int no) {
         try {
-            Board board = service.getBoardByNo(subject, no);
+            Board board = service.getBoardByNo(kind, no);
             SuccessView.printBoardByNo(board);
         } catch (InexistentException e) {
             FailView.errorMessage(e);
@@ -50,20 +54,31 @@ public class BoardController {
     public static void insertBoard(String kind, Board board) {
         try {
             service.insertBoard(kind, board);
+            SuccessView.printMessage("등록이 완료되었습니다");
         } catch (DuplicateException | InexistentException e) {
             FailView.errorMessage(e);
         }
-            SuccessView.printMessage("등록이 완료되었습니다");
+
 
     }
 
 
-    public static void deleteBoard(String subject, int no) {
-
+    public static void deleteBoard(String kind, int no) {
+        try {
+            service.deleteBoard(kind, no);
+            SuccessView.printMessage(kind + "게시판의 " + no + "번 게시물이 삭제되었습니다");
+        } catch (InexistentException e) {
+            FailView.errorMessage(e);
+        }
     }
 
-    public static void updateBoard(Board board, String subject) {
-
+    public static void updateBoard(Board board, String kind) {
+        try {
+            service.updateBoard(board, kind);
+            SuccessView.printMessage(kind + "게시판의 " + board.getNo() + "번 게시물이 수정되었습니다");
+        } catch (InexistentException e) {
+            FailView.errorMessage(e);
+        }
     }
 
 }

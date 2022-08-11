@@ -14,7 +14,7 @@ public class SuccessView {
         System.out.println(board);
     }
 
-    public static void printBoardByKind(String subject, Map<String, Board> board) {
+    public static void printBoardByKind(String kind, Map<String, Board> board) {
 
     }
 

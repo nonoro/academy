@@ -32,32 +32,32 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public Map<String, Board> getBoardByKind(String subject) {
+    public Map<String, Board> getBoardByKind(String kind) {
         return null;
     }
 
     @Override
-    public Board getBoardByNo(String subject, int no) {
+    public Board getBoardByNo(String kind, int no) {
         return null;
     }
 
     @Override
-    public boolean insertBoard(String subject, Board board) {
+    public boolean insertBoard(String kind, Board board) {
         return false;
     }
 
     @Override
-    public boolean duplicateByNo(String subject, int no) {
+    public boolean duplicateByNo(String kind, int no) {
         return false;
     }
 
     @Override
-    public boolean deleteBoard(String subject, int no) {
+    public boolean deleteBoard(String kind, int no) {
         return false;
     }
 
     @Override
-    public boolean updateBoard(Board board, String subject) {
+    public boolean updateBoard(Board board, String kind) {
         return false;
     }
 }

@@ -14,7 +14,7 @@ public class StartView {
 		MapStudentController.searchById("king"); //결과 : 이름, 총점
 
 		System.out.println("2.검색하기(없는경우) ******************");
-		MapStudentController.searchById("test"); //결과 : 예외메시지
+		MapStudentController.searchById("test.properties"); //결과 : 예외메시지
 
 		System.out.println();
 

@@ -24,27 +24,27 @@
 //		BoardController.getBoardByKind("photo");
 //
 //		System.out.println("2-2.게시판유형이 없는 경우.....");
-//		BoardController.getBoardByKind("test");
+//		BoardController.getBoardByKind("test.properties");
 //
 //
 //		System.out.println("\n");
 //
 //		/*3.글번호에 해당하는 자료실검색
-//		 존재하는 게시물 검색할 경우와 없는 게시물 검색 각각 test 결과 출력하기*/
+//		 존재하는 게시물 검색할 경우와 없는 게시물 검색 각각 test.properties 결과 출력하기*/
 //
 //		System.out.println("3.Board에서 글번호에 해당하는 게시물 검색");
-//		System.out.println("-----게시물이 존재하는 경우 검색 test----- ");
+//		System.out.println("-----게시물이 존재하는 경우 검색 test.properties----- ");
 //		BoardController.getBoardByno("archive", 10); //존재하는 게시물
 //
 //		System.out.println();
 //
-//		System.out.println("-----게시물이 없는 경우(글번호 오류)  검색 test-----");
+//		System.out.println("-----게시물이 없는 경우(글번호 오류)  검색 test.properties-----");
 //		BoardController.getBoardByno("archive", 50);// 없는 게시물
 //
 //		System.out.println();
 //
-//		System.out.println("-----게시물이 없는 경우(kind오류)  검색 test-----");
-//		BoardController.getBoardByno("test", 10);// 없는 게시물
+//		System.out.println("-----게시물이 없는 경우(kind오류)  검색 test.properties-----");
+//		BoardController.getBoardByno("test.properties", 10);// 없는 게시물
 //
 //		System.out.println("\n");
 //
@@ -72,7 +72,7 @@
 //
 //
 //		System.out.println("---5-2. 삭제실패하기(kind 오류) -----------------");
-//		BoardController.deleteBoard("test", 20);
+//		BoardController.deleteBoard("test.properties", 20);
 //
 //
 //		System.out.println("---5-3. 삭제실패하기(글번호 오류) -----------------");
@@ -83,14 +83,14 @@
 //
 //		System.out.println("---6.수정하기----------------");
 //		System.out.println("--6-1. photo수정 완료-----------------");
-//		BoardController.updateBoard(new PhotoBoard(10, "점심시간", "이효리", "뭐 먹지??", null, "test.gif") , "photo");
+//		BoardController.updateBoard(new PhotoBoard(10, "점심시간", "이효리", "뭐 먹지??", null, "test.properties.gif") , "photo");
 //
 //		System.out.println("--6-2. archive수정 완료-----------------");
 //		BoardController.updateBoard(new FreeBoard(10, "점심시간", "이효리", "뭐 먹지??", null, "a.xls",300) , "archive");
 //
 //		//게시판유형 잘못
 //		System.out.println("--6-3. 수정실패(kind 잘못) -----------------");
-//		BoardController.updateBoard(new FreeBoard(10, "점심시간", "이효리", "뭐 먹지??", null, "a.xls",300) , "test");
+//		BoardController.updateBoard(new FreeBoard(10, "점심시간", "이효리", "뭐 먹지??", null, "a.xls",300) , "test.properties");
 //
 //		System.out.println("--6-3. 수정실패(no 잘못) -----------------");
 //		BoardController.updateBoard(new FreeBoard(80, "점심시간", "이효리", "뭐 먹지??", null, "a.xls",300) , "archive");

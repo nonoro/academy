@@ -1,6 +1,5 @@
 package ex0805.homework.MVC_Collection.boardClass.model.dto;
 
-import java.util.ResourceBundle;
 
 public class PhotoBoard extends Board {
     private String imgName;
@@ -33,7 +32,7 @@ public class PhotoBoard extends Board {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder();
+        final StringBuilder sb = new StringBuilder(" PhotoBoard의 게시물 : ");
         sb.append(super.toString());
         sb.append(", 이미지 이름='").append(imgName).append('\'');
         sb.append("]");

@@ -8,16 +8,16 @@ import java.util.Map;
 public interface BoardService {
     public Map<String, Map<String, Board>> getBoardList();
 
-    public Map<String, Board> getBoardByKind(String subject);
+    public Map<String, Board> getBoardByKind(String kind);
 
-    public Board getBoardByNo(String subject, int no);
+    public Board getBoardByNo(String kind, int no);
 
-    public boolean insertBoard(String subject, Board board);
+    public void insertBoard(String kind, Board board);
 
-    public boolean duplicateByNo(String subject, int no);
+    public boolean duplicateByNo(String kind, int no);
 
-    public boolean deleteBoard(String subject, int no);
+    public void deleteBoard(String kind, int no);
 
-    public boolean updateBoard(Board board, String subject);
+    public void updateBoard(Board board, String kind);
 
 }

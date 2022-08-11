@@ -32,7 +32,7 @@ public class PropertiesExam {
     public void test01() {
         pro.clear(); // 앞에꺼 비우고 이 파일에 있는것만 읽어줌
         try {
-            pro.load(new FileInputStream("academy/ex0805/map/propertiesExam/test.properties"));
+            pro.load(new FileInputStream("academy/ex0805/map/propertiesExam/test.properties.properties"));
             System.out.println(pro);
 
             for (String k : pro.stringPropertyNames()) {
@@ -49,7 +49,7 @@ public class PropertiesExam {
         // 파일의 기준점이 classes폴더를 기준으로 경로를 잡는다 - bin이 기준이고 bin은 class들을 모아 놓는 폴더
         // ~.properties파일을 읽어오는 전용 클래스이다.
         // 그래서 경로를 설정할때 확장자는 생략한다. + academy도 생략 바로 패키지명부터 시작함
-        ResourceBundle rb = ResourceBundle.getBundle("ex0805/map/propertiesExam/test");// test.properties
+        ResourceBundle rb = ResourceBundle.getBundle("ex0805/map/propertiesExam/test.properties");// test.properties.properties
 
         for (String key : rb.keySet()) {
             String value = rb.getString(key);
