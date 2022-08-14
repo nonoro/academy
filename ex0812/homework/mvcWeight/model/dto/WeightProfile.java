@@ -4,7 +4,7 @@ public class WeightProfile {
     private String name;
     private String weight;
     private String password;
-    private String identityNumber;
+    private int identityNumber;
 
     public WeightProfile() {
 
@@ -15,15 +15,15 @@ public class WeightProfile {
         this.password = password;
     }
 
-    public WeightProfile(String name, String identityNumber) {
+    public WeightProfile(String name, int identityNumber) {
         this.name = name;
         this.identityNumber = identityNumber;
     }
 
-    public WeightProfile(String name, String weight, String password, String identityNumber) {
-       this.name = name;
+
+    public WeightProfile(String name, String weight, String password, int identityNumber) {
+        this(name, password);
         this.weight = weight;
-        this.password = password;
         this.identityNumber = identityNumber;
     }
 
@@ -51,4 +51,11 @@ public class WeightProfile {
         this.password = password;
     }
 
+    public int getIdentityNumber() {
+        return identityNumber;
+    }
+
+    public void setIdentityNumber(int identityNumber) {
+        this.identityNumber = identityNumber;
+    }
 }

@@ -21,6 +21,16 @@ public class OutputView {
 
     }
 
+    public static void printSearchPassword(WeightProfile weightProfile, String[] identityNumber) {
+        if (weightProfile.getIdentityNumber() != Integer.valueOf(identityNumber[2]) ) {
+            System.out.println("주민등록번호가 일치하지 않습니다.");
+            return;
+        }
+        System.out.println("======================================================================================");
+        System.out.println(weightProfile.getName() + "님의 비밀번호는 " + identityNumber[1] + "입니다." );
+        System.out.println("======================================================================================");
+    }
+
     public static void printEndMessage() {
         System.out.println("프로그램을 종료합니다.");
     }

@@ -52,10 +52,15 @@ public class WeightController {
                         break;
                     }
                     String password = InputView.updatePassword();
-                    service.updatePassword(updateProfile, updatePassword, password);
+                    service.updatePassword(updateProfile, updatePassword[0], password);
                     break;
 
                 case 5:
+                    WeightProfile searchPasswordProfile = InputView.searchPassword();
+                    String[] searchPassword = service.searchPassword(searchPasswordProfile);
+                    OutputView.printSearchPassword(searchPasswordProfile, searchPassword);
+                    break;
+
 
                 default:
                     OutputView.printEndMessage();
