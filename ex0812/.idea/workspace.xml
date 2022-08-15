@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de555a02-9553-44d2-8aaf-6fa3d4507e60" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0722/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0722/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0722/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0722/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0722/과제/weightTest/EncapsulationExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0722/과제/weightTest/EncapsulationExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0722/과제/weightTest/EncapsulationExamMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0722/과제/weightTest/EncapsulationExamMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0725/과제/_5장_확인문제/Excercise9.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0725/과제/_5장_확인문제/Excercise9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0725/과제/데이터를_올림차순으로_출력한다/Ascending.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0725/과제/데이터를_올림차순으로_출력한다/Ascending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0725/과제/로또/Lotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0725/과제/로또/Lotto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/Electronics.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/Electronics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/ElectronicsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/ElectronicsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/ElectronicsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/ElectronicsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/EndView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/EndView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/StartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/StartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0728/수업/MVC/요구사항.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0728/수업/MVC/요구사항.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0729/수업/상속_다형성예제/superEx/SuperKeywordExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0729/수업/상속_다형성예제/superEx/SuperKeywordExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/car/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/car/CarExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/car/CarExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/car/HankookTire.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/car/HankookTire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/car/KumhoTire.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/car/KumhoTire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/car/Tire.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/car/Tire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/ch7/exam.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/ch7/exam.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/parent/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/parent/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/parent/ChildExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/parent/ChildExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/parent/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/parent/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/parent2/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/parent2/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/parent2/InstanceofExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/parent2/InstanceofExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/parent2/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/parent2/Parent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/vehicle/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/vehicle/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/vehicle/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/vehicle/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/vehicle/DriverExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/vehicle/DriverExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/homework/vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/homework/vehicle/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/MVC/Electronics.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/MVC/Electronics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/MVC/ElectronicsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/MVC/ElectronicsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/MVC/ElectronicsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/MVC/ElectronicsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/MVC/EndView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/MVC/EndView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/MVC/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/MVC/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/MVC/StartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/MVC/StartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/AbstractFinalClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/AbstractFinalClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/FinalVariableExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/FinalVariableExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Pig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/abstract_final/exam/Pig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0801/study/equals/EqualsExam2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0801/study/equals/EqualsExam2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/homework/ch8/exam3/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/homework/ch8/exam3/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/homework/ch8/exam5/ActionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/homework/ch8/exam5/ActionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/homework/interfaceStudy_실습/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/homework/interfaceStudy_실습/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/homework/interfaceStudy_실습/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/homework/interfaceStudy_실습/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/homework/interfaceStudy_실습/Tv.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/homework/interfaceStudy_실습/Tv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/study/interface_study/interface_exam/BoardInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/study/interface_study/interface_exam/BoardInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/study/interface_study/interface_exam/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/study/interface_study/interface_exam/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0802/study/interface_study/interface_exam/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0802/study/interface_study/interface_exam/UploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0803/homework/_from1_to6/verification_problem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0803/homework/_from1_to6/verification_problem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/collection-20220804T015643Z-001.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/exception/ElectronicsArrayBoundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/exception/SearchNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/exception/SearchNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/Electronics.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/Electronics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/ElectronicsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/ElectronicsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/ElectronicsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/ElectronicsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/EndView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/EndView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/StartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/StartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/exception/ElectronicsArrayBoundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/exception/SearchNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/homework/ex0804/mvc소스/mvc/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/ListMethodExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/study/ListMethodExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/VariableArgsExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0804/study/VariableArgsExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/Board.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/BoardService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/MainView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/MvcColectionDiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/archiveInfo.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/boardClassDiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/collection02_결과화면.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/photoInfo.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/결과화면/결과화면1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/결과화면/결과화면2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/MVC_Collection/결과화면/결과화면3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/map/MapClassDiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/map/MapClassDiagram.ucls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/map/StartView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0804/study/collection/map/map예제.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0810/set_lotto/TreeSetLottoExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0810/set_lotto/TreeSetLottoExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/GUIEventinner/JFrameExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/GUIEventinner/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/event/JFrameExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/homework/MenuExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/homework/MenuExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/homework/profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/homework/profile/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/inner/InnerAccessExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/inner/JFrameAnonymousInnerExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/inner/JFrameInnerExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/BufferedFileCopyExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/FileCopyExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/FileExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/FileInputOutputExam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/read.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/io/write.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/GUIEventinner/JFrameExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/GUIEventinner/JFrameExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/event/JFrameExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/event/JFrameExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/inner/InnerAccessExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/inner/InnerAccessExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/inner/JFrameAnonymousInnerExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/inner/JFrameAnonymousInnerExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/inner/JFrameInnerExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/inner/JFrameInnerExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/io/BufferedFileCopyExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/io/BufferedFileCopyExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/io/FileCopyExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/io/FileCopyExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/io/FileExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/io/FileExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/io/FileInputOutputExam.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/io/FileInputOutputExam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex0811/study/io/read.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ex0811/study/io/read.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/DoWhileGugudan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/Excercise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/GradeCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/PrintStar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/SwitchGradeCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/WhileGugudan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/academy/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/academy/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/academy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ArithmeticOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ArithmeticOperationMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ArithmeticOperationMainVersion2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ArithmeticOperationVersion2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ScannerExam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ScannerGradeCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0721/ScoreCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/ex0722/test1/EncapsulationExam.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/academy/ex0722/test1/EncapsulationExam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/homework/DoWhileGugudan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/homework/Excercise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/homework/GradeCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/homework/PrintStar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/homework/SwitchGradeCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/homework/WhileGugudan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/academy/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teamProject/잘못된예시/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../teamProject/잘못된예시/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2DOATDgTiL3zO25ds8EnedkIlrZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de555a02-9553-44d2-8aaf-6fa3d4507e60" name="Changes" comment="" />
+      <created>1660559763028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660559763028</updated>
+    </task>
+    <servers />
+  </component>
+</project>
