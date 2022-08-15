@@ -1,4 +1,4 @@
-package ex0812.homework.mvc소스.mvc;
+package ex0812.homework.mvc소스.mvc.model.dto;
 /**
  전자제품의 속성을 관리하는 객체
  : Value Object = Data Transfer Object
@@ -10,7 +10,9 @@ public class Electronics{
     private String modelDetail;//설명
 
     //생성자 3개
-    public Electronics(){}
+    public Electronics(){
+
+    }
 
     //수정할때 사용할 생성자
     public Electronics(int modelNo, String modelDetail){
@@ -59,15 +61,13 @@ public class Electronics{
     public String toString() {
 
         StringBuilder builder = new StringBuilder();
-        builder.append("Electronics [모델번호: ");
         builder.append(modelNo);
-        builder.append(", 모델이름: ");
+        builder.append(",");
         builder.append(modelName);
-        builder.append(", 모델가격: ");
+        builder.append(",");
         builder.append(modelPrice);
-        builder.append(", 모델설명: ");
+        builder.append(",");
         builder.append(modelDetail);
-        builder.append("]");
         return builder.toString();
     }
 
