@@ -1,87 +1,83 @@
-package mvc;
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.mvc;
+/*
+    Viewì™€ Model ì‚¬ì´ì—ì„œ ì¤‘ê°„ ì—­í• 
+     : ì‚¬ìš©ìì˜ ìš”ì²­ì„ ë°›ì•„ì„œ ê·¸ì•  í•´ë‹¹í•˜ëŠ” ì„œë¹„ìŠ¤ë¥¼ í˜¸ì¶œí•˜ê³ 
+       í˜¸ì¶œí•œ ê²°ê³¼ë¥¼ ë°›ì•„ì„œ ê²°ê³¼ê°’ì— ë”°ë¼ ê²°ê³¼ ë·°ë¥¼ í˜¸ì¶œí•´ì¤€ë‹¤.
+ */
 
-import mvc.exception.ElectronicsArrayBoundsException;
-import mvc.exception.SearchNotFoundException;
+import ex0804.homework.ex0804.mvcì†ŒìŠ¤.exception.SearchNotFoundException;
 
-/**
-   View¿Í Model »çÀÌ¿¡¼­ Áß°£ ¿ªÇÒ.
-    : »ç¿ëÀÚÀÇ ¿äÃ»À» ¹Ş¾Æ¼­ ±×¿¡ ÇØˆÔÇÏ´Â ¼­ºñ½º¸¦ È£ÃâÇÏ°í
-	  È£ÃâÇÑ °á°ú¸¦ ¹Ş¾Æ¼­ °á°ú°ª¿¡ µû¶ó °á°ú ºä¸¦ È£ÃâÇØÁØ´Ù.
-*/
-class ElectronicsController{
-   private ElectronicsService service = ElectronicsService.getInstance() ; //
+import java.util.List;
 
-   /**
-      ÀüÀÚÁ¦Ç° µî·Ï
-   */
-   public void insert(Electronics electronics){
-	   try {
-		   //ÀÎ¼ö·Î Àü´ŞµÈ Á¤º¸¿¡¼­ »óÇ°¹øÈ£¸¦ ²¨³»¼­ Áßº¹¿©ºÎ¸¦ Ã¼Å©ÇÑ´Ù.
-		   Electronics dbElec = service.searchByModelNo(electronics.getModelNo());
-		   //Áßº¹ÀÌ´Ù.
-		   EndView.printMessage("»óÇ°ÄÚµå Áßº¹ÀÔ´Ï´Ù..");
-       
-	   }catch (SearchNotFoundException e) {
-		   //Áßº¹¾Æ´Ï´Ù!! --> µî·ÏÇÏ·¯°¡ÀÚ.
-		   try {
-		      service.insert(electronics);
-		      EndView.printMessage("µî·ÏµÇ¾ú½À´Ï´Ù.^^");
-		   }catch (ElectronicsArrayBoundsException ex) {
-			  EndView.printMessage( ex.getMessage() );
-		  }
-		   
-	  }
-       
-       
-	   
-   }//insert ¸Ş¼Òµå³¡ 
+class ElectronicsController {
+    private ElectronicsService service = ElectronicsService.getInstance(); // null
 
-   /**
-     ÀüÃ¼°Ë»ö
-   */
-   public void selectAll(){
-       //¼­ºñ½º¸¦ È£ÃâÇÏ°í ±×°á°ú¸¦ ¹Ş¾Æ¼­ °á°úºä¸¦ È£ÃâÇØÁØ´Ù.
-        Electronics [] electArr = service.selectAll();
-		EndView.printAll(electArr);
-   }
+    /*
+        ì „ìì œí’ˆ ë“±ë¡
+     */
+    public void insert(Electronics electronics) {
+        try {
+            // ì¸ìˆ˜ë¡œ ì „ë‹¬ëœ ì •ë³´ì—ì„œ ìƒí’ˆë²ˆí˜¸ë¥¼ êº¼ë‚´ì„œ ì¤‘ë³µì—¬ë¶€ë¥¼ ì²´í¬í•œë‹¤.
+            Electronics dbElec = service.searchByModelNo(electronics.getModelNo());
+            // ì¤‘ë³µì´ë‹¤!!
+            EndView.printMessage(electronics.getModelNo() + "ëŠ” ì´ë¯¸ ë“±ë¡ëœ ìƒí’ˆì…ë‹ˆë‹¤.");
+        } catch (SearchNotFoundException e) {
+            // ì¤‘ë³µì•„ë‹ˆë‹¤! -> ë“±ë¡í•˜ëŸ¬ê°€ì
+            service.insert(electronics);
+            EndView.printMessage("ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
+        }
+        // ì¤‘ë³µì´ ì•„ë‹ˆë©´ insertí•˜ê³  ì¤‘ë³µì´ë©´ ì—ëŸ¬ë©”ì‹œì§€ ì¶œë ¥ì„ í˜¸ì¶œí•œë‹¤.
 
+    }
 
-   /**
-    ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ÀüÀÚÁ¦Ç° °Ë»ö
-   */
-   public void searchByModelNo(int modelNo){
-	   try {
-	      //¼­ºñ½º¸¦ È£ÃâÇÏ°í ±× °á°ú¸¦ ¹Ş¾Æ¼­ °á°úºä¸¦ È£ÃâÇØÁØ´Ù.
-		 Electronics electronics = service.searchByModelNo(modelNo);
-		 EndView.printSearchByModelNo(electronics);
-	   }catch (SearchNotFoundException e) {
-		   EndView.printMessage( e.getMessage() );
-	   }
-	 
-   }
+    /*
+        ì „ì²´ê²€ìƒ‰
+     */
+    public void selectAll() {
+        // ì„œë¹„ìŠ¤ë¥¼ í˜¸ì¶œí•˜ê³  ê·¸ ê²°ê³¼ë¥¼ ë°›ì•„ì„œ ê²°ê³¼ë·°ë¥¼ í˜¸ì¶œí•´ì¤€ë‹¤.
+        List<Electronics> list = service.selectAll();
+        EndView.printAll(list);
+    }
 
-   /**
-      ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ÀüÀÚÁ¦Ç° ¼öÁ¤ÇÏ±â
-   */
-   public void update(Electronics electronics){ //¹øÈ£, ¼³¸í
-	   try {
-         service.update(electronics);
-         EndView.printMessage("¼öÁ¤µÇ¾ú½À´Ï´Ù.");
-	   }catch (SearchNotFoundException e) {
-		  EndView.printMessage(e.getMessage());
-	  }
-   }
+    /*
+        ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì „ìì œí’ˆ ê²€ìƒ‰
+     */
+    public void searchByModelNo(int modelNo) {
+        try {
+            // ì„œë¹„ìŠ¤ë¥¼ í˜¸ì¶œí•˜ê³  ê·¸ ê²°ê³¼ë¥¼ ë°›ì•„ì„œ ê²°ê³¼ë·°ë¥¼ í˜¸ì¶œí•œë‹¤
+            Electronics searchByModelNo = service.searchByModelNo(modelNo);
+            EndView.printSearchByModelNo(searchByModelNo);
+        } catch (SearchNotFoundException e) {
+            EndView.printMessage(e.getMessage());
+        }
+    }
+
+    /*
+        ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì „ìì œí’ˆ ìˆ˜ì •í•˜ê¸°
+     */
+    public void update(Electronics electronics) {
+        try {
+            service.update(electronics);
+            EndView.printMessage("ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤");
+        } catch (SearchNotFoundException e) {
+            EndView.printMessage(e.getMessage());
+        }
+    }
+
+    public void delete(int modelNo) {
+        try {
+            boolean delete = service.delete(modelNo);
+                EndView.printMessage("ì‚­ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } catch (SearchNotFoundException e) {
+            EndView.printMessage(e.getMessage());
+        }
+    }
+
+    /**
+     * ì¢…ë£Œê°€ ë  ë•Œ íŒŒì¼ì— ì €ì¥í•˜ê¸°
+     */
+    public void destroy() {
+        service.destroy();
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

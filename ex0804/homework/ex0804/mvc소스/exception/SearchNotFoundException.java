@@ -1,11 +1,15 @@
-package mvc.exception;
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.exception;
 
 /**
- * »óÇ°ÄÚµå·Î »óÇ°À» Á¶È¸ÇßÀ»¶§ Ã£´Â Á¤º¸°¡ nullÀÌ¸é ¹ß»ı½ÃÅ³ ¿¹¿Ü °´Ã¼ 
- * */
+ * ìƒí’ˆì½”ë“œë¡œ ìƒí’ˆì„ ì¡°íšŒí–ˆì„ë•Œ ì°¾ëŠ” ì •ë³´ê°€ nullì´ë©´ ë°œìƒì‹œí‚¬ ì˜ˆì™¸ ê°ì²´
+ */
+
 public class SearchNotFoundException extends Exception {
-   public SearchNotFoundException() {}
-   public SearchNotFoundException(String message) {
-	   super(message);
-   }
+    public SearchNotFoundException() {
+
+    }
+
+    public SearchNotFoundException(String message) {
+        super(message);
+    }
 }

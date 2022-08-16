@@ -22,13 +22,13 @@ public class VariableArgsExam {
 
     public static void main(String[] args) {
         VariableArgsExam va = new VariableArgsExam();
-       /*   va.test(3);
-            va.test();
-            va.test(3, 3, 4, 1);
-            va.test(3, 5);
+       /*   va.test.properties(3);
+            va.test.properties();
+            va.test.properties(3, 3, 4, 1);
+            va.test.properties(3, 5);
 
-            va.test("안녕");
-            va.test(true, 5.5);
+            va.test.properties("안녕");
+            va.test.properties(true, 5.5);
 ////////////////////////////////////////////////////////////////////////////////
         */
         va.test2("안녕");

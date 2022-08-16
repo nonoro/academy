@@ -7,7 +7,7 @@ public class ListMethodExam {
     private List<String> list = new ArrayList<>(5);
 
     public ListMethodExam(String[] args) {
-//        list.add("test");
+//        list.add("test.properties");
         // 데이터 추가
         for (String name : args) {
             if (!list.contains(name)) {

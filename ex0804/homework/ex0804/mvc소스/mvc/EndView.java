@@ -1,36 +1,38 @@
-package mvc;
-/**
-  »ç¿ëÀÚ ¿äÃ»¿¡ ÇØ´çÇÏ´Â °á°ú¸¦ ¸ğ´ÏÅÍ¿¡ Ãâ·ÂÇÏ´Â Å¬·¡½º 
-*/
-class EndView{
-    /**
-	   Àü´ŞµÈ ¹è¿­À» Ãâ·Â(ÀüÃ¼ °Ë»ö °á°ú)
-	*/
-	public static void printAll(Electronics [] elecArr){
-        System.out.println("**** ÀüÀÚÁ¦Ç°("+ ElectronicsService.count +")°³ Á¤º¸ ********************");
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.mvc;
 
-		for(int i=0; i< ElectronicsService.count  ; i++){
-           Electronics elec = elecArr[i];
-		  System.out.println(elec.toString());
+import java.util.List;
+
+/**
+ ì‚¬ìš©ì ìš”ì²­ì— í•´ë‹¹í•˜ëŠ” ê²°ê³¼ë¥¼ ëª¨ë‹ˆí„°ì— ì¶œë ¥í•˜ëŠ” í´ë˜ìŠ¤
+ */
+class EndView{
+	/**
+	 ì „ë‹¬ëœ ë°°ì—´ì„ ì¶œë ¥(ì „ì²´ ê²€ìƒ‰ ê²°ê³¼)
+	 */
+	public static void printAll(List<Electronics> elecArr){
+		System.out.println("**** ì „ìì œí’ˆ("+ elecArr.size() +")ê°œ ì •ë³´ ********************");
+
+		for(Electronics e : elecArr){
+			System.out.println(e);
 		}
-		
+
 		System.out.println();
 	}
 
 	/**
-	  ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ÀüÀÚÁ¦Ç° Ãâ·ÂÇÏ±â 
-	*/
+	 ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì „ìì œí’ˆ ì¶œë ¥í•˜ê¸°
+	 */
 	public static void printSearchByModelNo(Electronics electronics){
-		   System.out.println("-----"+ electronics.getModelNo() +" Á¤º¸ ÀÔ´Ï´Ù. ---------");
-		   System.out.println(electronics);
-		   
-		  
+		System.out.println("-----"+ electronics.getModelNo() +" ì •ë³´ ì…ë‹ˆë‹¤. ---------");
+		System.out.println(electronics);
+
+
 	}
 	/**
-	  ¼º°ø ¿©ºÎ¿¡ °ü·ÃµÈ ¸Ş½ÃÁö Ãâ·Â
-	*/
+	 ì„±ê³µ ì—¬ë¶€ì— ê´€ë ¨ëœ ë©”ì‹œì§€ ì¶œë ¥
+	 */
 	public static void printMessage(String message){
-         System.out.println(message);
+		System.out.println(message);
 	}
 
 }

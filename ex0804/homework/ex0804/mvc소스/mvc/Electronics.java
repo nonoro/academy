@@ -1,76 +1,79 @@
-package mvc;
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.mvc;
+
+import java.io.Serializable;
+
 /**
-  ÀüÀÚÁ¦Ç°ÀÇ ¼Ó¼ºÀ» °ü¸®ÇÏ´Â °´Ã¼
-    : Value Object = Data Transfer Object
-*/
-public class Electronics{
-    private int modelNo;// »óÇ°¹øÈ£
-	private String modelName; //»óÇ°ÀÌ¸§
-	private int modelPrice;//°¡°İ
-	private String modelDetail;//¼³¸í
+ ì „ìì œí’ˆì˜ ì†ì„±ì„ ê´€ë¦¬í•˜ëŠ” ê°ì²´
+ : Value Object = Data Transfer Object
+ : ì§ë ¬í™” í•´ì„œ íŒŒì¼ì— ì €ì¥
+ */
+public class Electronics implements Serializable { //trasientë‚˜ staticì´ ë¶™ìœ¼ë©´ ì§ë ¬í™” ëŒ€ìƒ ì œì™¸
+    private int modelNo;// ìƒí’ˆë²ˆí˜¸
+    private String modelName; //ìƒí’ˆì´ë¦„
+    private int modelPrice;//ê°€ê²©
+    private String modelDetail;//ì„¤ëª…
 
-	//»ı¼ºÀÚ 3°³
-	public Electronics(){}
+    //ìƒì„±ì 3ê°œ
+    public Electronics(){}
 
-	//¼öÁ¤ÇÒ¶§ »ç¿ëÇÒ »ı¼ºÀÚ
-	public Electronics(int modelNo, String modelDetail){
+    //ìˆ˜ì •í• ë•Œ ì‚¬ìš©í•  ìƒì„±ì
+    public Electronics(int modelNo, String modelDetail){
         this.modelNo = modelNo;
-		this.modelDetail = modelDetail;
-	}
+        this.modelDetail = modelDetail;
+    }
 
-	public Electronics(int modelNo, String modelName, int modelPrice, String modelDetail){
-       this(modelNo, modelDetail);// »ı¼ºÀÚ±¸ÇöºÎ Ã¹¹øÂ° ÁÙ¿¡¼­ ´Ù¸¥ »ı¼ºÀÚ È£Ãâ
+    public Electronics(int modelNo, String modelName, int modelPrice, String modelDetail){
+        this(modelNo, modelDetail);// ìƒì„±ìêµ¬í˜„ë¶€ ì²«ë²ˆì§¸ ì¤„ì—ì„œ ë‹¤ë¥¸ ìƒì„±ì í˜¸ì¶œ
 
-	   this.modelName=modelName;
-	   this.modelPrice = modelPrice;
-	}
+        this.modelName=modelName;
+        this.modelPrice = modelPrice;
+    }
 
-	//set , get ÀÛ¼º
-	//setXxx() : public ¸®ÅÏvoid , ÀÎ¼öÇÊ¼ö
-  public void setModelNo(int modelNo){
+    //set , get ì‘ì„±
+    //setXxx() : public ë¦¬í„´void , ì¸ìˆ˜í•„ìˆ˜
+    public void setModelNo(int modelNo){
         this.modelNo=modelNo;
-  }
-  public void setModelName(String modelName){
-      this.modelName=modelName;
-  }
-  public void setModelPrice(int modelPrice){
+    }
+    public void setModelName(String modelName){
+        this.modelName=modelName;
+    }
+    public void setModelPrice(int modelPrice){
         this.modelPrice=modelPrice;
-  }
-  public void setModelDetail(String modelDetail){
-      this.modelDetail=modelDetail;
-  }
+    }
+    public void setModelDetail(String modelDetail){
+        this.modelDetail=modelDetail;
+    }
 
 
-  //getXxx() : public ¸®ÅÏÇÊ¼ö, ÀÎ¼ö¾øÀ½
-  public int getModelNo(){
+    //getXxx() : public ë¦¬í„´í•„ìˆ˜, ì¸ìˆ˜ì—†ìŒ
+    public int getModelNo(){
         return modelNo;
-  }
-  public String getModelName(){
-      return modelName;
-  }
-  public int getModelPrice(){
+    }
+    public String getModelName(){
+        return modelName;
+    }
+    public int getModelPrice(){
         return modelPrice;
-  }
-  public String getModelDetail(){
-      return modelDetail;
-  }
+    }
+    public String getModelDetail(){
+        return modelDetail;
+    }
 
-@Override
-public String toString() {
-	
-	   
-	StringBuilder builder = new StringBuilder();
-	builder.append("Electronics [modelNo=");
-	builder.append(modelNo);
-	builder.append(", modelName=");
-	builder.append(modelName);
-	builder.append(", modelPrice=");
-	builder.append(modelPrice);
-	builder.append(", modelDetail=");
-	builder.append(modelDetail);
-	builder.append("]");
-	return builder.toString();
-}
+    @Override
+    public String toString() {
 
-    
+        StringBuilder builder = new StringBuilder();
+        builder.append("Electronics [ëª¨ë¸ë²ˆí˜¸: ");
+        builder.append(modelNo);
+        builder.append(", ëª¨ë¸ì´ë¦„: ");
+        builder.append(modelName);
+        builder.append(", ëª¨ë¸ê°€ê²©: ");
+        builder.append(modelPrice);
+        builder.append(", ëª¨ë¸ì„¤ëª…: ");
+        builder.append(modelDetail);
+        builder.append("]");
+        return builder.toString();
+    }
+
+
 }

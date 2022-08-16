@@ -1,110 +1,115 @@
-package mvc;
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.mvc;
 
-import mvc.exception.ElectronicsArrayBoundsException;
-import mvc.exception.SearchNotFoundException;
+
+import ex0804.homework.ex0804.mvcì†ŒìŠ¤.exception.SearchNotFoundException;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
-  ÀüÀÚÁ¦Ç°¿¡ °ü·ÃµÈ ±â´ÉÀ» ´ã´çÇÒ Å¬·¡½º  - ½Ì±ÛÅæ Å¬·¡½º
-*/
-class ElectronicsService{
-   public static int count; //¹è¿­¹æ¿¡ ÀúÀåµÈ ÀüÀÚÁ¦Ç°ÀÇ °³¼ö¸¦Ã¼Å©!!
+ * ì „ìì œí’ˆì— ê´€ë ¨ëœ ê¸°ëŠ¥ì„ ë‹´ë‹¹í•  í´ë˜ìŠ¤  - ì‹±ê¸€í†¤ í´ë˜ìŠ¤
+ */
+class ElectronicsService {
+    //ì˜ì†ì„± : ì „ìì œí’ˆ ì •ë³´ë¥¼ ì €ì¥í•˜ê³  ê´€ë¦¬(ë“±ë¡, ê²€ìƒ‰, ìˆ˜ì •, ì‚­ì œ.....)
+    List<Electronics> list = new ArrayList<>(); //ê³µê°„ ìƒì„±
 
- // ÃÊ±âÄ¡ µ¥ÀÌÅÍ Á¤º¸ 
-   String [][] data = new String [][]{
-		{"100","¼±Ç³±â","35000","»ï¼º ¼±Ç³±â"},
-		{"200","ÀüÀÚ·»Áö","55000","Àß µ¥¿öÁ®¿ä.."},
-		{"300","¿¡¾îÄÁ","5500000","¹«Ç³ ¿¡¾îÄÁ ³Ê¹« ½Ã¿øÇØ"},
-		{"400","³ÃÀå°í","800000","LG ³ÃÀå°í"},
-		{"500","µå¶óÀÌ±â","9000","LG µå¶óÀÌ±â"}
-	}; 
+    private static ElectronicsService instance = new ElectronicsService(); //privateìƒì„±ì í˜¸ì¶œë¨
 
 
-   private static ElectronicsService instance = new  ElectronicsService(); //private»ı¼ºÀÚ È£ÃâµÊ
-
-   //¿µ¼Ó¼º : ÀüÀÚÁ¦Ç° Á¤º¸¸¦ ÀúÀåÇÏ°í °ü¸®(µî·Ï, °Ë»ö, ¼öÁ¤, »èÁ¦.....)
-   Electronics elecArr []  ; //°ø°£ »ı¼º
-   
     /**
-	  ¿ÜºÎ¿¡¼­ °´Ã¼ »ı¼º¾ÈµÊ.
-	*/
-    private ElectronicsService(){
-		System.out.println("private »ı¼ºÀÚ È£ÃâµÊ.....");
-        //µ¥ÀÌÅÍ¸¦ ÃÊ±âÈ­ ¼¼ÆÃ 
-        elecArr = new Electronics[7];
-
-        for(int i=0; i < data.length ; i++){
-
-          elecArr[ ElectronicsService.count ] = 
-			  new Electronics(Integer.parseInt(data[i][0]) ,data[i][1],Integer.parseInt(data[i][2]),data[i][3]);
-
-		  ElectronicsService.count++;
+     * ì™¸ë¶€ì—ì„œ ê°ì²´ ìƒì„±ì•ˆë¨.
+     */
+    private ElectronicsService() {
+//        System.out.println("private ìƒì„±ì í˜¸ì¶œë¨.....");
+        // ë§Œì•½, íŒŒì¼(listfile.txt)ì´ ì¡´ì¬í•˜ëŠ”ì§€ ì²´í¬í•˜ê³  ì¡´ì¬í•˜ë©´ ê·¸ëƒ¥ ì½ì–´ì˜¨ë‹¤
+        // ì—†ìœ¼ë©´ ë°ì´í„°ë¥¼ ì´ˆê¸°í™” í•œë‹¤.
+        File file = new File("ex0804/homework/ex0804/mvcì†ŒìŠ¤/listFile.txt");
+        if (file.exists()) {
+            //íŒŒì¼ì„ ì½ì–´ì™€ì„œ listì— ë‹´ì•„ì¤€ë‹¤
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+                list = (List<Electronics>) ois.readObject();
+                System.out.println("ì¡´ì¬í•œê²½ìš° : " + list);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            list.add(new Electronics(100, "ì„ í’ê¸°", 35000, "ì‚¼ì„± ì„ í’ê¸°"));
+            list.add(new Electronics(200, "ì „ìë Œì§€", 55000, "ì˜ ë°ì›Œì ¸ìš”.."));
+            list.add(new Electronics(300, "ì—ì–´ì»¨", 5500000, "ë¬´í’ ì—ì–´ì»¨ ë„ˆë¬´ ì‹œì›í•´"));
+            list.add(new Electronics(400, "ëƒ‰ì¥ê³ ", 800000, "LG ëƒ‰ì¥ê³ "));
+            list.add(new Electronics(500, "ë“œë¼ì´ê¸°", 9000, "LG ë“œë¼ì´ê¸°"));
+            System.out.println("ì—†ëŠ”ê²½ìš° = " + list);
         }
+        //ë°ì´í„°ë¥¼ ì´ˆê¸°í™” ì„¸íŒ…
 
-     }//»ı¼ºÀÚ³¡
+    }//ìƒì„±ìë
+
+
 
     /**
-	   ÇöÀç °´Ã¼¸¦ ¸®ÅÏÇØÁØ´Ù.
-	*/
-	public static ElectronicsService getInstance(){
-          return instance;
-	}
+     * í˜„ì¬ ê°ì²´ë¥¼ ë¦¬í„´í•´ì¤€ë‹¤.
+     */
+    public static ElectronicsService getInstance() {
+        return instance;
+    }
 
     /**
-	   ÀüÀÚÁ¦Ç° µî·Ï
-	      ¹è¿­ÀÇ ±æÀÌ¸¦ ¹ş¾Æ³µÀ»¶§ ElectronicsArrayBoundsException ¹ß»ı½ÃÄÑ¶ó.
-	*/
-    public void insert(Electronics electronics)throws ElectronicsArrayBoundsException{//¹øÈ£, ÀÌ¸§,°¡°İ, ¼³¸í
-         //¹è¿­ÀÇ ±æÀÌ°¡ ¹ş¾î³µ´ÂÁö¸¸ Ã¼Å©ÇÏ°í 
-         if(elecArr.length <= ElectronicsService.count){
-              throw new ElectronicsArrayBoundsException("´õ ÀÌ»ó µî·Ï ÇÒ¼ö ¾ø½À´Ï´Ù.");
-		 }
+     * ì „ìì œí’ˆ ë“±ë¡
+     */
+    public void insert(Electronics electronics) {//ë²ˆí˜¸, ì´ë¦„, ê°€ê²©, ì„¤ëª…
+        list.add(electronics);
 
-		 elecArr[ElectronicsService.count++ ] = electronics;
-        
-	}
+    }
 
     /**
-	   µî·ÏµÈ ÀüÃ¼ ÀüÀÚÁ¦Ç° °Ë»ö
-	*/
-	public Electronics [] selectAll(){
-
-      return elecArr;
-	}
+     * ë“±ë¡ëœ ì „ì²´ ì „ìì œí’ˆ ê²€ìƒ‰
+     */
+    public List<Electronics> selectAll() {
+        return list;
+    }
 
     /**
-	   ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ÀüÀÚÁ¦Ç° °Ë»ö
-	    @return : nullÀÌ¸é ¾ø´Ù, null¾Æ´Ï¸é Ã£Àº °´Ã¼ ¸®ÅÏ
-	*/
-	public Electronics searchByModelNo(int modelNo)throws SearchNotFoundException{
-         for(int i=0; i< ElectronicsService.count ; i++){
-                 Electronics elec = elecArr[i];
-				 if(elec.getModelNo()  == modelNo){
-                      return elec;
-				 }
-		 }
-       
-         //¸øÃ£¾Ò´Ù!!
-         throw new SearchNotFoundException(modelNo+"ÄÚµå ¿À·ù·Î °Ë»öÇÒ¼ö ¾ø½À´Ï´Ù.");
-	}
-	/**
-	   ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ÀüÀÚÁ¦Ç° ¼öÁ¤ÇÏ±â 
-	    (¼³¸í¸¸ ¼öÁ¤ÇÑ´Ù)
-		
-	*/
-	public void update(Electronics electronics)throws SearchNotFoundException{ //»óÇ°¹øÈ£, ¼³¸í
-		
-          Electronics saveElec = this.searchByModelNo( electronics.getModelNo() );
-       
-          //¼öÁ¤ÇÏÀÚ
-		  saveElec.setModelDetail( electronics.getModelDetail() );
-		
+     * ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì „ìì œí’ˆ ê²€ìƒ‰
+     *
+     * @return : nullì´ë©´ ì—†ë‹¤, nullì•„ë‹ˆë©´ ì°¾ì€ ê°ì²´ ë¦¬í„´
+     */
+    public Electronics searchByModelNo(int modelNo) throws SearchNotFoundException {
+        for (Electronics elec : list) {
+            if (elec.getModelNo() == modelNo) {
+                return elec;
+            }
+        }
+        // ëª»ì°¾ì•˜ë‹¤!!
+        throw new SearchNotFoundException(modelNo + "ë²ˆì— í•´ë‹¹í•˜ëŠ” ëª¨ë¸ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
+    }
 
-       
-	}
+    /**
+     * ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì „ìì œí’ˆ ìˆ˜ì •í•˜ê¸°
+     * (ì„¤ëª…ë§Œ ìˆ˜ì •í•œë‹¤)
+     */
+    public void update(Electronics electronics) throws SearchNotFoundException { //ìƒí’ˆë²ˆí˜¸, ì„¤ëª…
+        Electronics saveElec = this.searchByModelNo(electronics.getModelNo());
+        //ìˆ˜ì •í•˜ì
+        saveElec.setModelDetail(electronics.getModelDetail());
+    }
+
+    public boolean delete(int modelNo) throws SearchNotFoundException {
+        Electronics deleteElec = this.searchByModelNo(modelNo); // nullì´ ë‚˜ì˜¤ë©´ throwsë¡œ ì¸í•´ì„œ ì»¨íŠ¸ë¡¤ëŸ¬ìª½ìœ¼ë¡œ ê°
+        return list.remove(deleteElec);
+    }
+
+    /*
+     * ì¢…ë£Œê°€ ë ë•Œ ìµœì¢… listì˜ ì •ë³´ë¥¼ íŒŒì¼ì— ì €ì¥í•œë‹¤.
+    */
+    public void destroy() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ex0804/homework/ex0804/mvcì†ŒìŠ¤/listFile.txt"))) {
+            oos.writeObject(list);
+            oos.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
-}//Å¬·¡½º³¡
-
-
-
-
+}//í´ë˜ìŠ¤ë

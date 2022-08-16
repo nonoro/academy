@@ -1,8 +1,9 @@
-package mvc;
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.mvc;
+
 class StartView {
 	public static void main(String[] args) {
-		System.out.println("-----------ÇÁ·Î±×·¥ ½ÃÀÛÇÕ´Ï´Ù. -----------------");
-       
-	    new MenuView().printMenu();
+		System.out.println("-----------í”„ë¡œê·¸ëž¨ ì‹œìž‘í•©ë‹ˆë‹¤. -----------------");
+
+		new MenuView().printMenu();
 	}
 }

@@ -1,94 +1,109 @@
-package mvc;
+package ex0804.homework.ex0804.mvcì†ŒìŠ¤.mvc;
+
 import java.util.Scanner;
 
 /**
-   »ç¿ëÀÚÀÇ ¿äÃ»À» Å°º¸µå·Î ÀÔ·Â¹Ş´Â Å¬·¡½º 
-*/
-public class MenuView{
-    Scanner sc= new Scanner(System.in);
-	ElectronicsController controller = new ElectronicsController(); //Àü¿ªº¯¼ö ÃÊ±âÈ­, »ı¼ºÀÚ È£Ãâ
+ * ì‚¬ìš©ìì˜ ìš”ì²­ì„ í‚¤ë³´ë“œë¡œ ì…ë ¥ë°›ëŠ” í´ë˜ìŠ¤
+ */
+public class MenuView {
+    Scanner sc = new Scanner(System.in);
+    ElectronicsController controller = new ElectronicsController(); //ì „ì—­ë³€ìˆ˜ ì´ˆê¸°í™”, ìƒì„±ì í˜¸ì¶œ
 
-	/**
-	  ÀüÃ¼ ¸Ş´º¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
-	*/
-	public void printMenu(){
-        
-	     while(true){
-           System.out.println("-------------------------------------------------------------------");
-           System.out.println("1. ÀüÃ¼°Ë»ö    2. ¸ğµ¨¹øÈ£°Ë»ö     3.µî·Ï     4. ¼öÁ¤     9. Á¾·á");
-		   System.out.println("-------------------------------------------------------------------");
-		   System.out.print("¸Ş´º¼±ÅÃ > ");
+    /**
+     * ì „ì²´ ë©”ë‰´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
+     */
+    public void printMenu() {
 
-		   String  menu = sc.nextLine();
-		   switch(menu){
-               case "1" : 
-                 controller.selectAll();
-			   break;
-			   case "2" : 
-                 this.inputSearch();
-			   break;
-			   case "3" : 
-                 this.inputInsert();
-			   break;
-			   case "4" : 
-                 this.inputUpdate();
-			   break;
-			   case "9" : 
-                 System.exit(0);
-			   default:
-				   System.out.println("¸Ş´º¸¦ ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä!!!!");
+        while (true) {
+            System.out.println("-----------------------------------------------------------------------------------------");
+            System.out.println("1. ì „ì²´ê²€ìƒ‰    2. ëª¨ë¸ë²ˆí˜¸ê²€ìƒ‰     3.ë“±ë¡     4. ìˆ˜ì •     5. ì‚­ì œ     9. ì¢…ë£Œ");
+            System.out.println("-----------------------------------------------------------------------------------------");
+            System.out.print("ë©”ë‰´ì„ íƒ > ");
 
-		   }//switch¹®³¡
+            String menu = sc.nextLine();
+            switch (menu) {
+                case "1":
+                    controller.selectAll();
+                    break;
+                case "2":
+                    this.inputSearch();
+                    break;
+                case "3":
+                    this.inputInsert();
+                    break;
+                case "4":
+                    this.inputUpdate();
+                    break;
+                case "5":
+                    this.inputDelete();
+                    break;
+                case "9":
+                    //ìµœì¢… listë¥¼ íŒŒì¼ì— ì €ì¥í•œë‹¤!!!
+                    System.out.println("íŒŒì¼ì— ëª¨ë“  ì •ë³´ë¥¼ ì €ì¥ì™„ë£Œí–ˆìŠµë‹ˆë‹¤.");
+                    System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œí•©ë‹ˆë‹¤^^.");
+                    controller.destroy();
+                    System.exit(0);
+                default:
+                    System.out.println("ë©”ë‰´ë¥¼ ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”!!!!");
 
-		 }//while¹®³¡
+            }//switchë¬¸ë
 
-	}//¸Ş¼Òµå³¡
+        }//whileë¬¸ë
 
-	/**
-	   µî·ÏÇÒ¶§ Å°º¸µå ÀÔ·ÂÀ» Ã³¸®ÇÏ´Â ¸Ş¼Òµå
-	*/
-	public void inputInsert(){
-        System.out.print("¸ğµ¨¹øÈ£Àº? ");
+    }//ë©”ì†Œë“œë
+
+
+    /**
+     * ë“±ë¡í• ë•Œ í‚¤ë³´ë“œ ì…ë ¥ì„ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ
+     */
+    public void inputInsert() {
+        System.out.print("ëª¨ë¸ë²ˆí˜¸ì€? ");
         int modelNo = Integer.parseInt(sc.nextLine());
 
-		System.out.print("¸ğµ¨ÀÌ¸§Àº? ");
+        System.out.print("ëª¨ë¸ì´ë¦„ì€? ");
         String modelName = sc.nextLine();
 
-		System.out.print("¸ğµ¨°¡°İÀº? ");
+        System.out.print("ëª¨ë¸ê°€ê²©ì€? ");
         int modelPrice = Integer.parseInt(sc.nextLine());
 
-		System.out.print("¸ğµ¨¼³¸íÀº? ");
+        System.out.print("ëª¨ë¸ì„¤ëª…ì€? ");
         String modelDetail = sc.nextLine();
 
-       Electronics elec = new Electronics(modelNo, modelName, modelPrice, modelDetail);
-	   controller.insert( elec );
+        Electronics elec = new Electronics(modelNo, modelName, modelPrice, modelDetail);
+        controller.insert(elec);
 
-	}
+    }
 
-	/**
-	  ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ÀüÀÚÁ¦Ç° °Ë»öÇÏ±â À§ÇØ¼­ ¸ğµ¨¹øÈ£ Å°º¸µåÀÔ·Â Ã³¸®ÇÏ´Â ¸Ş¼Òµå
-	*/
-    public void inputSearch(){
-       System.out.print("Ã£À» ÀüÀÚÁ¦Ç° ¸ğµ¨¹øÈ£Àº? ");
+    /**
+     * ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì „ìì œí’ˆ ê²€ìƒ‰í•˜ê¸° ìœ„í•´ì„œ ëª¨ë¸ë²ˆí˜¸ í‚¤ë³´ë“œì…ë ¥ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ
+     */
+    public void inputSearch() {
+        System.out.print("ì°¾ì„ ì „ìì œí’ˆ ëª¨ë¸ë²ˆí˜¸ì€? ");
         int modelNo = Integer.parseInt(sc.nextLine());
-		controller.searchByModelNo(modelNo);
-
-   
-	}
+        controller.searchByModelNo(modelNo);
 
 
-	/**
-	  ¸ğµ¨¹øÈ£¿¡ ÇØ´çÇÏ´Â ¼³¸íÀ» ¼öÁ¤ÇÏ±â À§ÇØ Å°º¸µå ÀÔ·ÂÃ³¸®ÇÏ´Â ¸Ş¼Òµå
-	*/
-	public void inputUpdate(){
-         System.out.print("¼öÁ¤ÇÏ·Á´Â ÀüÀÚÁ¦Ç° ¸ğµ¨¹øÈ£Àº? ");
+    }
+
+
+    /**
+     * ëª¨ë¸ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ì„¤ëª…ì„ ìˆ˜ì •í•˜ê¸° ìœ„í•´ í‚¤ë³´ë“œ ì…ë ¥ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ
+     */
+    public void inputUpdate() {
+        System.out.print("ìˆ˜ì •í•˜ë ¤ëŠ” ì „ìì œí’ˆ ëª¨ë¸ë²ˆí˜¸ëŠ”? ");
         int modelNo = Integer.parseInt(sc.nextLine());
 
-		System.out.print("º¯°æÇÏ·Á´Â ¸ğµ¨¼³¸íÀº? ");
+        System.out.print("ë³€ê²½í•˜ë ¤ëŠ” ëª¨ë¸ì„¤ëª…ì€? ");
         String modelDetail = sc.nextLine();
 
-		controller.update( new Electronics(modelNo , modelDetail) );
+        controller.update(new Electronics(modelNo, modelDetail));
 
-	}
+    }
 
+    private void inputDelete() {
+        System.out.print("ì‚­ì œí•˜ë ¤ëŠ” ì „ìì œí’ˆ ëª¨ë¸ë²ˆí˜¸ëŠ”? ");
+        int modelNo = Integer.parseInt(sc.nextLine());
+        controller.delete(modelNo);
+    }
 }
+

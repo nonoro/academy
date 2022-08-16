@@ -1,11 +1,11 @@
 
-1) ServiceÀÇ insert, update ¸®ÅÏÅ¸ÀÔ void·Î ¼öÁ¤ÇÑ´Ù.
+1) Serviceì˜ insert, update ë¦¬í„´íƒ€ì… voidë¡œ ìˆ˜ì •í•œë‹¤.
 
-2) ElectronicsArrayBoundsException ¸¸µç´Ù.
-     : Electroincs ¹è¿­ÀÇ ±æÀÌ¸¦ ¹ş¾î³µÀ»´ë...
-     
-     
-3) SearchNotFoundException¸¸µç´Ù.
-    : °Ë»ö °á°ú°¡ null ÀÏ¶§ 
+2) ElectronicsArrayBoundsException ë§Œë“ ë‹¤.
+     : Electroincs ë°°ì—´ì˜ ê¸¸ì´ë¥¼ ë²—ì–´ë‚¬ì„ëŒ€...
+
+
+3) SearchNotFoundExceptionë§Œë“ ë‹¤.
+    : ê²€ìƒ‰ ê²°ê³¼ê°€ null ì¼ë•Œ
     
 
