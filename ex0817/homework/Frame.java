@@ -42,7 +42,6 @@ public class Frame extends JFrame {
         c.add("Center", scroll);
         c.add("South", btn);
 
-
         setBounds(300, 300, 300, 300);
         setVisible(true);
 
