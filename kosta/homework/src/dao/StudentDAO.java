@@ -1,10 +1,12 @@
-package dao;
+package kosta.homework.src.dao;
 
-import util.DbUtil;
-import vo.Student;
-import vo.Teacher;
+import kosta.homework.src.util.DbUtil;
+import kosta.homework.src.vo.Student;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class StudentDAO {
     /**
      * 1번 : 성별이 여자인 학생의 정보를 검색하기
      * SELECT * FROM STUDENT WHERE substr(수_주민등록번호, 8, 1) = 2;
+     * primary key를 기반으로 조건을 주는 쿼리는 리스트가 리턴타입으로 나올 수 없다 왜냐면 1 아니면 0 이 나오기때문에
      */
     public static List<Student> getSelectMaleStudentInfo() {
         Connection con = null;

@@ -1,4 +1,4 @@
-package vo;
+package kosta.homework.src.vo;
 
 public class Teacher_View {
     private int 강사번호;

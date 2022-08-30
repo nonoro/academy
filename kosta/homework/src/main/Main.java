@@ -1,11 +1,10 @@
-package main;
+package kosta.homework.src.main;
 
-import dao.StudentDAO;
-import dao.TeacherDAO;
-import dao.Teacher_ViewDAO;
-import vo.Student;
-import vo.Teacher;
-import vo.Teacher_View;
+
+import kosta.homework.src.dao.StudentDAO;
+import kosta.homework.src.dao.TeacherDAO;
+import kosta.homework.src.vo.Student;
+import kosta.homework.src.vo.Teacher;
 
 import java.util.List;
 
@@ -24,15 +23,43 @@ public class Main {
         }
 
         System.out.println("\n5번 : 과목을 인수로 전달받아 그 과목을 강의하는 강사의 정보(서브쿼리)");
-        List<Teacher> subject = TeacherDAO.subjectOfTeacherInfo("java");
-        for (Teacher teacher : subject) {
-            System.out.println(teacher);
+        Teacher subject = TeacherDAO.subjectOfTeacherInfo("java");
+        if (subject == null) {
+            System.out.println("과목명에 해당하는 정보가 없습니다.");
+        } else {
+            System.out.println(subject);
         }
 
-        System.out.println("\n8번 뷰를 미리 만들고 그 뷰를 이용해서 강사의 번호를 인수로 전달받아 정보를 출력.");
-        List<Teacher_View> tv = Teacher_ViewDAO.teacherNumberInfo(3);
-        for (Teacher_View teacher_view : tv) {
-            System.out.println(teacher_view);
+
+//        System.out.println("\n8번 뷰를 미리 만들고 그 뷰를 이용해서 강사의 번호를 인수로 전달받아 정보를 출력.");
+//        List<Teacher_View> tv = Teacher_ViewDAO.teacherNumberInfo(3);
+//        for (Teacher_View teacher_view : tv) {
+//            System.out.println(teacher_view);
+//        }
+
+        //        // create는 0과 1로 성공 실패를 볼 수 없고 예외발생 여부에 따라서 성공 실패를 구분할 수 있다.
+//        System.out.println("\n--------- 4. 뷰를 생성해보자");
+//        int result = Teacher_ViewDAO.createView();
+//        if (result == 0) {
+//            System.out.println("뷰가 생성되지 않았습니다 = " + result);
+//        } else {
+//            System.out.println("뷰가 생성되었습니다.= " + result);
+//        }
+
+        System.out.println("\n----- 8-1 뷰에서 강사번오에 해당하는 강사의 정보를 검색하기 ------------------------------");
+        Teacher teacher = TeacherDAO.getTeacherInfoByNo(1);
+        if (teacher == null) {
+            System.out.println("강사의 정보가 없습니다.");
+        } else {
+            System.out.println("--------------강사정보-----------------");
+            System.out.print(teacher.get강사번호() + " | ");
+            System.out.print(teacher.get강사이름() + " | ");
+
+            System.out.print(teacher.getSubject().get수강코드() + " | ");
+            System.out.print(teacher.getSubject().get과목() + " | ");
+
+            System.out.print(teacher.getRoom().get강의실번호() + " | ");
+            System.out.print(teacher.getRoom().get수용인원() + "\n");
         }
     }
 }

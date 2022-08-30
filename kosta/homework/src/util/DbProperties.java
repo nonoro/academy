@@ -1,4 +1,4 @@
-package util;
+package kosta.homework.src.util;
 
 public interface DbProperties {
     String DRIVER_NAME = "oracle.jdbc.driver.OracleDriver";

@@ -1,4 +1,4 @@
-package util;
+package kosta.homework.src.util;
 
 import java.sql.*;
 

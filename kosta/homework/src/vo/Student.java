@@ -1,4 +1,4 @@
-package vo;
+package kosta.homework.src.vo;
 
 public class Student {
     private int 수강생번호;

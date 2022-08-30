@@ -1,8 +1,7 @@
-package dao;
+package kosta.homework.src.dao;
 
-import util.DbUtil;
-import vo.Teacher;
-import vo.Teacher_View;
+import kosta.homework.src.util.DbUtil;
+import kosta.homework.src.vo.Teacher_View;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -51,4 +50,46 @@ public class Teacher_ViewDAO {
         }
         return list;
     }
+
+    public static int createView() {
+        /**
+         * 뷰를 생성하는 메소드
+         * CREATE OR REPLACE VIEW TEACHER_VIEW
+         * AS
+         * SELECT t.강사번호, t.강사이름, t.수강코드, j.과목, r.강의실번호, r.수용인원
+         * FROM TEACHER t INNER JOIN SUBJECT j ON t.수강코드 = j.수강코드
+         * 				  	      INNER JOIN SUGANGTB g ON t.강사번호 = g.강사번호
+         * 		       			  INNER JOIN ROOM r ON r.강의실번호 = g.강의실번호;
+         *
+         * 위의 쿼리를 실행해서 뷰로 만든다
+         *
+         * 그리고 나서 그 강사의 번호를 인수로 전달받아 뷰에서 그 강사번호에 해당하는 정보를 출력한다.
+         *  SELECT * FROM TEACHER_view where 강사번호 = ?;
+         *
+         */
+        Connection con = null;
+        PreparedStatement ps = null;
+        int result = 0;
+        String sql = "CREATE OR REPLACE VIEW t_v" +
+                "          AS" +
+                "          SELECT t.강사번호, t.강사이름, t.수강코드, j.과목, r.강의실번호, r.수용인원" +
+                "          FROM TEACHER t INNER JOIN SUBJECT j ON t.수강코드 = j.수강코드" +
+                "          INNER JOIN SUGANGTB g ON t.강사번호 = g.강사번호" +
+                "          INNER JOIN ROOM r ON r.강의실번호 = g.강의실번호";
+
+        try {
+            con = DbUtil.getConnection();
+            ps = con.prepareStatement(sql);
+            result = ps.executeUpdate();
+
+            result = 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            result = 0;
+        }finally {
+            DbUtil.dbClose(con, ps);
+        }
+        return result;
+    }
+
 }

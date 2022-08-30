@@ -1,4 +1,5 @@
-package vo;
+package kosta.homework.src.vo;
+
 
 public class Teacher {
     private int 강사번호;
@@ -8,6 +9,11 @@ public class Teacher {
     private String 주소;
     private String 이메일;
     private String 수강코드;
+
+    // 과목정보
+    private Subject subject; // ORM, 강사하나당 과목이 1개라서 List선언 안함
+    // 강의실정보
+    private Room room; // 얘도 마찬가지 강의 하나당 룸하나임
 
     public Teacher() {
     }
@@ -20,6 +26,13 @@ public class Teacher {
         this.주소 = 주소;
         this.이메일 = 이메일;
         this.수강코드 = 수강코드;
+    }
+
+    public Teacher(int 강사번호, String 강사이름, String 주민등록번호, String 연락처, String 주소, String 이메일, String 수강코드, Subject subject, Room room) {
+        this(강사번호, 강사이름, 주민등록번호, 연락처, 주소, 이메일, 수강코드);
+        this.수강코드 = 수강코드;
+        this.subject = subject;
+        this.room = room;
     }
 
     public int get강사번호() {
@@ -78,9 +91,25 @@ public class Teacher {
         this.수강코드 = 수강코드;
     }
 
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Teacher[");
+        final StringBuilder sb = new StringBuilder("Teacher{");
         sb.append("강사번호=").append(강사번호);
         sb.append(", 강사이름='").append(강사이름).append('\'');
         sb.append(", 주민등록번호='").append(주민등록번호).append('\'');
@@ -88,7 +117,7 @@ public class Teacher {
         sb.append(", 주소='").append(주소).append('\'');
         sb.append(", 이메일='").append(이메일).append('\'');
         sb.append(", 수강코드='").append(수강코드).append('\'');
-        sb.append(']');
+        sb.append('}');
         return sb.toString();
     }
 }
